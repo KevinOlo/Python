@@ -1,0 +1,28 @@
+import array
+
+ct= []
+
+
+with open ('elfcal.txt', 'r') as val:
+    
+    maxn = 0
+
+    for ecal in val.readlines():
+
+        ecal = ecal.strip()
+
+        if ecal != '':
+
+            maxn += int(ecal)
+        
+        else:
+        
+            ct.append(maxn)
+            maxn = 0
+
+ct = sorted(ct)
+
+print(ct[-1])
+
+
+
